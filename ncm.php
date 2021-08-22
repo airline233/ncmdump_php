@@ -136,6 +136,6 @@ if (preg_match("/cli/i", php_sapi_name())) {
       if($rt[0] == true) { echo "{$rt['1']} Successfully dumped"; exit; }
       echo $rt;
       exit;
-    }else { die("Please type filename"); }
+    }
 }
 ?>
