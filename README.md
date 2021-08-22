@@ -1,11 +1,11 @@
 # NCM Dump
    针对[原项目(ncmdump)](https://github.com/SomeBottle/ncm)进行了修改完善 在其原有代码基础上修复并增加了一些功能：
-    * [add] 批量Dump
-    * [fix] 玄学报错(缺少ogg3库引入)
-    * [fix] flac格式无法写入封面图片
-    * [add] mp3,flac格式写入歌曲元数据(歌曲名,艺术家/音乐家,专辑名)
-    * [优化] 返回机制从echo改为return,class类库中终于不再直接输出内容
-    * [优化] 更新了getid3类库
+   * [add] 批量Dump
+   * [fix] 玄学报错(缺少ogg3库引入)
+   * [fix] flac格式无法写入封面图片
+   * [add] mp3,flac格式写入歌曲元数据(歌曲名,艺术家/音乐家,专辑名)
+   * [优化] 返回机制从echo改为return,class类库中终于不再直接输出内容
+   * [优化] 更新了getid3类库
 
 ## 需要的拓展/需要开启的函数/依赖软件
    * php_openssl (不是很清楚 应该是用于解密)
