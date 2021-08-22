@@ -17,7 +17,7 @@ class NCM {
         $head = '4354454E4644414D'; //Standard Head
         $music = $in_path . $filename;
         $f = fopen($music, "rb");
-        if(!$f) return "Unable to open file! $music";
+        if(!$f) return array(false,"Unable to open file! $music");
         $h = fread($f, 8); //文件头
         if (Hex::strToHex($h) == $head) { //Check head
             fseek($f, 2, SEEK_CUR); //Seek Current
@@ -116,11 +116,11 @@ class NCM {
                 $process = $tagwriter->WriteTags(); //写入数据
                 if (!$process) {
                     fclose($f);
-                    return 'Unable to dump:Failed to write tags!<br>' . implode('<br><br>', $tagwriter->errors);
+                    return array(false,'Unable to dump:Failed to write tags!<br>' . implode('<br><br>', $tagwriter->errors));
                 }
                 if (!empty($tagwriter->warnings)) {
                     fclose($f);
-                    return 'There were some warnings:<br>' . implode('<br><br>', $tagwriter->warnings);
+                    return array(false,'There were some warnings:<br>' . implode('<br><br>', $tagwriter->warnings));
                 }
             }
             fclose($f);

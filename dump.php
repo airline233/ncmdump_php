@@ -12,7 +12,7 @@ while (($filename = readdir($info)) !== false) {
   exec("mv '{$dir}{$filename}' '{$dir}{$tmpname}'"); //重命名
   $rt = NCM::dump($tmpname,true,$dir,$output_dir); //调用dump
   exec("mv '{$dir}{$tmpname}' '{$done_dir}{$filename}'"); //重命名回来
-  if($rt[0] !== true) { exec("echo 1 > /proc/sys/vm/drop_caches"); die("$rt \n"); } //判断是否存在报错
+  if($rt[0] === false) { exec("echo 1 > /proc/sys/vm/drop_caches"); die("Returned Error: {$rt[1]} \n"); } //判断是否存在报错
   $realname = str_replace(str_replace(".ncm",null,$tmpname),str_replace(".ncm",null,$filename),$rt[1]); //取得dump后真实文件名
   exec("mv '{$rt[1]}' '{$realname}'"); //重命名输出文件
   echo "{$realname} | Successfully dumped \n";
