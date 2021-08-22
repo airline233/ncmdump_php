@@ -5,9 +5,9 @@
    * php_openssl (不是很清楚 应该是用于解密)
    * php_exif (操作图像文件)
 
-   * shell_exec (getid3库操作metaflac)
+   * shell_exec (getid3库操作flacmeta)
    * exec (用于操作文件)
-   * metaflac (用于写入flac格式元数据 在CLI安装 `yum install metaflac -y` / `apt install metaflac -y`)
+   * flacmeta (用于写入flac格式元数据 在CLI安装 `yum install flacmeta -y` / `apt install flacmeta -y`)
 
 ## 原项目使用的Class
    * [getID3](https://github.com/JamesHeinrich/getID3)
