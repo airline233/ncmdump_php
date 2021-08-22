@@ -1,7 +1,7 @@
 <?php
 //error_reporting("E_ERROR");
 class NCM {
-    public static function dump($filename, $dealwithid3 = true, $in_path = "./ncm/", $output_path = "./output/") {
+    public static function dump($filename, $dealwithid3 = true, $in_path = "./", $output_path = "./") {
         //准备getid3库
         require_once './getid3/getid3.php';
         // Initialize getID3 engine
