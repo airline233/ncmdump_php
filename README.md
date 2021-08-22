@@ -19,5 +19,6 @@
    * [ncmdump-php](https://github.com/juzi5201314/ncmdump)
 
 ## 食用方法
-   `php ncm.php <filepath> <dealwithid3>` 单文件
-   `php dump.php` 文件夹内ncm歌曲批量dump 需手动修改PHP文件中的`输入NCM路径,输出NCM路径,输出dump后文件路径`(懒得适配CLI)
+   单文件dump `php ncm.php <filepath> <dealwithid3>`
+
+   批量dump(文件夹内所有歌曲) `php dump.php` 需手动修改PHP文件中的`输入NCM路径,输出NCM路径,输出dump后文件路径`(懒得适配CLI)
