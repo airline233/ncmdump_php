@@ -36,5 +36,7 @@
 
    批量dump(文件夹内所有歌曲) `php dump.php` 需手动修改PHP文件中的`输入NCM路径,输出NCM路径,输出dump后文件路径`(懒得适配CLI)
 
+   [保姆级使用教程](https://blog.qcmoe.com/program/ncmDump.html)
+
 ## 鸣谢
-   * [@Jochen233](https://blog.qcmoe.com) 发现并报告了bug及README的描述错误 & 给予了更新意见
+   * [@Jochen233](https://blog.qcmoe.com) 发现并报告了bug及README的描述错误, 给予了更新意见, 为程序撰写了保姆级使用教程

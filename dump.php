@@ -9,7 +9,7 @@ if(!is_dir($done_dir)) mkdir($done_dir);
 if(!is_dir($output_dir)) mkdir($output_dir);
 $info = opendir($input_dir);
 while (($filename = readdir($info)) !== false) {
-  if($filename == "." || $filename == ".." || !stristr($filename,".ncm"))continue;
+  if($filename == "." || $filename == ".." || !stristr($filename,".ncm")) continue;
   exec("echo 1 > /proc/sys/vm/drop_caches"); //清理内存缓存
   $tmpname = time().rand(1000,9999).".ncm"; //生成临时文件名防止乱码无法读取文件
   exec("mv '{$input_dir}{$filename}' '{$input_dir}{$tmpname}'"); //重命名
